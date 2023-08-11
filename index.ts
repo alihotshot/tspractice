@@ -66,6 +66,38 @@ function log(message: string | number) {
 console.log(log('Hi'))
 console.log(25626)
 
+//Arrays
+const fruits: string[] = ['Mango', 'Banana', 'Orange', 'Apple']
+
+//foreach in array
+
+fruits.forEach((num) => {
+  console.log(num)
+})
+
+const pushed = fruits.push('Strawberry') //Add Array
+const popped = fruits.pop() //Remove Array
+
+console.log(pushed, popped)
+console.log(fruits)
+
+const shift = fruits.shift()
+console.log(fruits); // Shift Array
+
+fruits.splice(2, 1, 'Umer', 'Ali', 'Ahmed')
+console.log(fruits)
+
+fruits.splice(2, 0, 'Learn')
+console.log(fruits)
+
+let slicArray = fruits.slice(1)
+console.log(slicArray)
+
+//array annotations and doubled
+const numbers: number[] = [1, 2, 3, 4]
+const doubled = numbers.map((num) => num * 2)
+console.log(doubled)
+
 // Extending Interfaces
 interface Animal {
   name: string
@@ -101,39 +133,6 @@ const add: MathFunc = (x: number, y: number) => x + y
 const sub: MathFunc = (x: number, y: number) => x - y
 
 console.log('***** Array ******')
-
-//Arrays
-const fruits: string[] = ['Mango', 'Banana', 'Orange', 'Apple']
-
-//foreach in array
-
-fruits.forEach((num) => {
-  console.log(num)
-})
-
-const pushed = fruits.push('Strawberry') //Add Array
-const popped = fruits.pop() //Remove Array
-
-console.log(pushed, popped)
-console.log(fruits)
-
-const shift = fruits.shift()
-console.log(fruits); // Shift Array
-
-fruits.splice(2, 1, 'Umer', 'Ali', 'Ahmed')
-console.log(fruits)
-
-fruits.splice(2, 0, 'Learn')
-console.log(fruits)
-
-let slicArray = fruits.slice(1)
-console.log(slicArray)
-
-//array annotations and doubled
-const numbers: number[] = [1, 2, 3, 4]
-const doubled = numbers.map((num) => num * 2)
-console.log(doubled)
-
 
 
 
