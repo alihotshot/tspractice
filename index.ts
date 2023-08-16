@@ -1,3 +1,5 @@
+import { log } from 'console'
+
 //Tuples
 let tup: [number, string, any] = [25626, 'Testing', true]
 
@@ -60,7 +62,7 @@ const mulNum = (a: number, b: number) => {
 console.log(mulNum(5, 5))
 
 //Void or Union Type in Function
-function log(message: string | number) {
+function LogMsg(message: string | number) {
   return message
 }
 console.log(log('Hi'))
@@ -82,7 +84,7 @@ console.log(pushed, popped)
 console.log(fruits)
 
 const shift = fruits.shift()
-console.log(fruits); // Shift Array
+console.log(fruits) // Shift Array
 
 fruits.splice(2, 1, 'Umer', 'Ali', 'Ahmed')
 console.log(fruits)
@@ -92,6 +94,9 @@ console.log(fruits)
 
 let slicArray = fruits.slice(1)
 console.log(slicArray)
+
+//shift & unshift
+// push pop
 
 //array annotations and doubled
 const numbers: number[] = [1, 2, 3, 4]
@@ -134,5 +139,30 @@ const sub: MathFunc = (x: number, y: number) => x - y
 
 console.log('***** Array ******')
 
+// if else
 
+const promptSync = require('prompt-sync')()
+console.log('****** GRADES FORMULA ******')
 
+let st_name: string = promptSync('Your Name = ')
+let marks: number = promptSync('Your Obtained Marks = ')
+
+const gradesFun = (marks: number) => {
+  if (marks < 50) {
+    console.log(`${st_name}- You Got Grade F - Work Hard`)
+  } else if (marks >= 50 && marks < 60) {
+    console.log(`${st_name}- You Got Grade C - Adequate`)
+  } else if (marks >= 60 && marks < 80) {
+    console.log(`${st_name}- You Got Grade B - Satisfactory`)
+  } else if (marks >= 80 && marks < 100) {
+    console.log(`${st_name}- You Got Grade A - Excellent`)
+  }
+}
+
+let showGrades = gradesFun(marks)
+console.log(showGrades)
+
+//Modules export & import
+export const walkSteps = (step: number) => {
+  console.log(step)
+}
