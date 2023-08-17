@@ -110,8 +110,8 @@ var gradesFun = function (marks) {
 };
 var showGrades = gradesFun(marks);
 console.log(showGrades);
-//Modules
+//Modules export & import
 var walkSteps = function (step) {
-    console.log(step++);
+    console.log(step);
 };
 exports.walkSteps = walkSteps;
