@@ -2,6 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.walkSteps = void 0;
 var console_1 = require("console");
+var inquirer_1 = require("inquirer");
 //Tuples
 var tup = [25626, 'Testing', true];
 //Tuple Array
@@ -13,7 +14,7 @@ employee = [
     [4, 'Shehryar'],
 ];
 console.log(employee[1]);
-var person = {
+var perso = {
     firstName: 'Ali',
     lastName: 'Haider',
     age: 25,
@@ -110,8 +111,52 @@ var gradesFun = function (marks) {
 };
 var showGrades = gradesFun(marks);
 console.log(showGrades);
+//Loops - for loop
+for (var i_1 = 0; i_1 < 10; i_1++) {
+    console.log(i_1);
+    var result = i_1++;
+    console.log(result);
+}
+//for  - for of loop
+var number = [1, 2, 3, 4, 5];
+for (var _i = 0, number_1 = number; _i < number_1.length; _i++) {
+    var num = number_1[_i];
+    console.log(num);
+}
+//for - for in loop
+var person = {
+    name: 'Ali',
+    age: 23,
+    job: 'Engineer',
+};
+for (var key in person) {
+    console.log(key);
+    console.log(person[key]);
+}
+//while loop
+var count = 0;
+while (count < 3) {
+    console.log(count);
+    count++;
+}
+//do-while loop
+var i = 0;
+do {
+    console.log(i);
+    i++;
+} while (i < 0);
 //Modules export & import
+var sportsman = 'Ali Haider';
+exports.default = sportsman;
 var walkSteps = function (step) {
-    console.log(step);
+    console.log("".concat(sportsman, " did ").concat(step));
 };
 exports.walkSteps = walkSteps;
+//inquirer - get data/input from user on console - It's a Library
+//install it from npm library and check in the package.json
+var user = inquirer_1.default.prompt({
+    type: 'input',
+    name: 'username',
+    message: 'What is your name?',
+});
+console.log(user);

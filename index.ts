@@ -1,4 +1,5 @@
 import { log } from 'console'
+import inquirer from 'inquirer'
 
 //Tuples
 let tup: [number, string, any] = [25626, 'Testing', true]
@@ -22,7 +23,7 @@ type Person = {
   age: number
 }
 
-const person: Person = {
+const perso: Person = {
   firstName: 'Ali',
   lastName: 'Haider',
   age: 25,
@@ -162,7 +163,77 @@ const gradesFun = (marks: number) => {
 let showGrades = gradesFun(marks)
 console.log(showGrades)
 
-//Modules export & import
-export const walkSteps = (step: number) => {
-  console.log(step)
+//Loops - for loop
+for (let i = 0; i < 10; i++) {
+  console.log(i)
+  let result: number = i++
+  console.log(result)
 }
+
+//for  - for of loop
+const number = [1, 2, 3, 4, 5]
+for (const num of number) {
+  console.log(num)
+}
+
+//for - for in loop
+const person = {
+  name: 'Ali',
+  age: 23,
+  job: 'Engineer',
+}
+
+for (const key in person) {
+  console.log(key)
+  console.log(person[key])
+}
+
+//while loop
+let count = 0
+while (count < 3) {
+  console.log(count)
+  count++
+}
+
+//do-while loop
+let i = 0
+do {
+  console.log(i)
+  i++
+} while (i < 0)
+
+//Modules export & import
+const sportsman: string = 'Ali Haider'
+export default sportsman
+
+export const walkSteps = (step: number) => {
+  console.log(`${sportsman} did ${step}`)
+}
+
+//inquirer - get data/input from user on console - It's a Library
+//install it from npm library and check in the package.json
+let user = inquirer.prompt({
+  type: 'input',
+  name: 'username',
+  message: 'What is your name?',
+})
+console.log(user)
+
+
+// Inquirer
+// Commonjs
+// Es
+// chalk(console)
+// banner(console)
+
+
+// Tasks for this week!!
+
+// 1. Create a modular calculator program using TypeScript. The program should take user input through the Inquirer library and implement various arithmetic operations (addition, subtraction, multiplication, division) as separate ES modules. 
+
+// 2. Create a quiz application using TypeScript and the Inquirer library. The program should take user input through Inquirer, implement a quiz with a variable number of questions, calculate the quiz score in separate ES module, and display the final result along with correct and incorrect user-given answers. 
+
+// Note: you can also use Chalk library for adding color to the console output.
+
+
+
