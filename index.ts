@@ -219,11 +219,11 @@ let user = inquirer.prompt({
 })
 console.log(user)
 
-// Inquirer
+// Inquirer (Input/Get Data)
 // Commonjs
-// Es
-// chalk(console)
-// banner(console)
+// ES(Latest Module) Vs CommonJS (Async vs sync)
+// chalk(Library) - For Interactive user interface
+// banner(console) - We can show banner by using this
 
 // Tasks for this week!!
 
@@ -232,3 +232,90 @@ console.log(user)
 // 2. Create a quiz application using TypeScript and the Inquirer library. The program should take user input through Inquirer, implement a quiz with a variable number of questions, calculate the quiz score in separate ES module, and display the final result along with correct and incorrect user-given answers.
 
 // Note: you can also use Chalk library for adding color to the console output.
+
+// Union Type/Literals
+let userAge: string | number = 'Declared Dead'
+userAge = 55
+
+function cashWithdraw(amount: string | number) {
+  // amount.toLowerCase() as it is giving error
+  //here we need to narrowing the type | narrowing concept introduce here
+  amount = 'Thirty thousand'
+  amount.toLowerCase()
+
+  amount = 30000
+  amount / 100
+
+  //another way
+  // if(typeof ===){}
+}
+
+// ========== another example with existing datatypes
+let newAge = Math.random() > 0.6 ? 'Khan' : 60
+
+// with Unions
+let amount: number | '10K'
+amount = 5000
+amount = '10K'
+// amount = '50K' //Error bcz we declared more specific
+
+//More Specific
+let trafficeLight: 'Red' | 'Green' | 'Yellow'
+
+let newVariable: number | string | null | boolean
+//TS Allow us to create your own type for reusibility
+type myType = number | string | null | boolean | undefined //Type Alias
+let secVariable: myType
+
+secVariable = null
+secVariable = undefined
+
+//Object
+//Object Aliased
+//Like Type Alias you can also create your own class
+
+type PersonType = {
+  name: string
+  age: number
+  gender: string
+  address: 'ISB'
+}
+
+function studInfo(std: PersonType) {
+  std.name
+  std.age
+  std.gender
+}
+
+//Nested Objects
+let completeAddress = {
+  hNo: 4,
+  stNo: 18,
+  city: 'Isb',
+  postcode: 46000,
+}
+
+let teacher = {
+  subject: 'Chemistry',
+  Address: completeAddress,
+}
+
+// Create student registration form, Take info from inquirer, Make an ES Module, Use Union Literals & Type Alises
+// Use Nested OBjects, and Display info by using Chalk and Banner Library
+
+//inquirer 
+let getRegData = await inquirer.prompt([{
+  name:
+}])
+//Nested Object
+let stuAddress = {
+  hno: 319,
+  stNo: 18,
+  city: 'Rawalpindi',
+}
+
+type StuForm = {
+  name: string
+  age: number
+  address: stuAddress
+}

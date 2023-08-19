@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "******* Readonly in Interfaces and Classes *******",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
