@@ -219,7 +219,12 @@ let user = inquirer.prompt({
 })
 console.log(user)
 
+<<<<<<< Updated upstream
 // Inquirer (Input/Get Data)
+=======
+
+// Inquirer
+>>>>>>> Stashed changes
 // Commonjs
 // ES(Latest Module) Vs CommonJS (Async vs sync)
 // chalk(Library) - For Interactive user interface
