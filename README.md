@@ -1,4 +1,32 @@
-# tspractice
+
+******* Statically-Typed Language *******
+
+A statically-typed language, like TypeScript, is a programming language in which variable types are checked at compile-time, before the code is actually run.
+
+
+******* Compile Time Vs Run Time *******
+
+Compile Time: Compile time refers to the period during which the source code of a program is translated into machine code.
+Run Time/Execution time: When the compiled program is actually executed by a computer or runtime environment.
+
+
+******* Core Datatypes in TypeScript *******
+
+Primitive Types: number, string, boolean, null, undefined, symbol
+Arrays, Objects, Union Types, Tuples, Enums, Any, Void, Never, Type Alases, class, interface etc. 
+
+
+******* Datatype Vs LLiterals *******
+
+let score: number = 90;    // Here, '90' is a numeric literal and number is a datatype. 
+
+
+
+
+
+
+
+
 
 ******* Readonly in Interfaces and Classes *******
 
@@ -24,8 +52,8 @@ Compile time is the period when the programming code (such as C#,  Java, C, Pyth
 
 There are two syntaxes for performing type assertions in TypeScript:
 
-    1. Angle Bracket Syntax:
-    2. As Syntax:
+    1. Angle Bracket Syntax
+    2. As Syntax
 
 ******* Interfaces *******
 

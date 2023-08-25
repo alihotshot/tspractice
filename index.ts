@@ -221,7 +221,7 @@ console.log(user)
 
 <<<<<<< Updated upstream
 // Inquirer (Input/Get Data)
-=======
+
 
 // Inquirer
 >>>>>>> Stashed changes
