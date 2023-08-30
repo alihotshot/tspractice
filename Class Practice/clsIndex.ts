@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 // Union Literals and typeof
 function cashWithdraw(amount: string | number | boolean) {
   if (typeof amount == 'string') {
@@ -101,7 +100,7 @@ let writeAddress: address = {
   city: 'Rawalpindi',
   Address: 'DK-319, Z-38, Street no 8',
 }
-=======
+
 //Case 1 : When both are same
 
 let freshObject = { id: 50, firstName: 'Ali' }
@@ -111,6 +110,6 @@ freshObject = secondObject
 
 //Case 2 : When second one is different
 
-let newObject = { new_id: 65, firstName: 'Haider' }
-freshObject = newObject
->>>>>>> 56b0be204c59477713241bdc71b676fe1828bf13
+let newObject = { firstName: 'Haider' }
+newObject = freshObject
+// freshObject = newObject - Will show error

@@ -1,4 +1,3 @@
-"use strict";
 // Union Literals and typeof
 function cashWithdraw(amount) {
     if (typeof amount == 'string') {
@@ -13,20 +12,20 @@ function cashWithdraw(amount) {
 }
 cashWithdraw('Thirty Thousand');
 cashWithdraw(20000);
-let BMW = {
+var BMW = {
     model: 2022,
     milege: 120,
 };
-let Audi = {
+var Audi = {
     model: 2022,
     milege: 120,
 };
 function EngineEfficiency(car) {
-    let calculation = car.model * car.milege;
+    var calculation = car.model * car.milege;
     return calculation;
 }
 EngineEfficiency(Audi);
-let Honda = {
+var Honda = {
     model: 2023,
     milege: 120,
     speed: 400,
@@ -34,7 +33,7 @@ let Honda = {
 BMW = Honda;
 EngineEfficiency(Honda);
 // duck
-let MyPet = (pet) => {
+var MyPet = function (pet) {
     if (pet.canSwim == true && pet.canFly == true) {
         console.log('This is Duck');
     }
@@ -42,19 +41,27 @@ let MyPet = (pet) => {
         console.log('This is not a Duck');
     }
 };
-let myDuck = {
+var myDuck = {
     canSwim: true,
     canFly: true,
 };
 MyPet(myDuck);
-let germanShep = {
+var germanShep = {
     canSwim: true,
     canFly: false,
 };
 myDuck = germanShep;
 germanShep = myDuck; //As we know they are not equal.
 MyPet(germanShep);
-let writeAddress = {
+var writeAddress = {
     city: 'Rawalpindi',
     Address: 'DK-319, Z-38, Street no 8',
 };
+//Case 1 : When both are same
+var freshObject = { id: 50, firstName: 'Ali' };
+var secondObject = { id: 66, firstName: 'Haider' };
+freshObject = secondObject;
+//Case 2 : When second one is different
+var newObject = { firstName: 'Haider' };
+newObject = freshObject;
+// freshObject = newObject - Will show error
